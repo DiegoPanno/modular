@@ -213,11 +213,10 @@
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contacto-nexus" />
-
               <input
                 type="hidden"
                 name="subject"
-                value="Nueva consulta desde la web: Nexus Habit"
+                value="Nueva consulta: Nexus Habit"
               />
 
               <div class="mb-3">
@@ -230,6 +229,42 @@
                   required
                 />
               </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Correo electrónico"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="telefono"
+                  id="tel"
+                  placeholder="WhatsApp"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  id="mensaje"
+                  rows="3"
+                  placeholder="Contanos sobre tu proyecto"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-warning btn-lg w-100 fw-bold"
+              >
+                ENVIAR CONSULTA
+              </button>
             </form>
           </div>
         </div>
