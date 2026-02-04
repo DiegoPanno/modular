@@ -200,19 +200,28 @@
               Compromiso, lealtad y garantía es nuestra premisa.
             </p>
             <form id="contactForm" class="text-start" data-netlify="true" name="contacto-nexus" method="POST">
-            <input type="hidden" name="form-name" value="contacto-nexus" />
+    <input type="hidden" name="subject" value="Nueva consulta de cliente: %{formName}" />
+    
+    <input type="hidden" name="form-name" value="contacto-nexus" />
 
-             <div class="mb-3">
-             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre completo" required>
-           </div>
-           <div class="mb-3">
+    <div class="mb-3">
+        <input type="text" class="form-control" name="name" id="nombre" placeholder="Nombre completo" required>
+    </div>
+    
+    <div class="mb-3">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" required>
+    </div>
+
+    <div class="mb-3">
         <input type="tel" class="form-control" name="telefono" id="tel" placeholder="WhatsApp (Ej: 2235...)" required>
     </div>
+
     <div class="mb-3">
-        <textarea class="form-control" name="mensaje" id="mensaje" rows="3" placeholder="Contanos sobre tu terreno o proyecto"></textarea>
+        <textarea class="form-control" name="message" id="mensaje" rows="3" placeholder="Contanos sobre tu proyecto"></textarea>
     </div>
+
     <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">ENVIAR CONSULTA</button>
-            </form>
+</form>
           </div>
         </div>
       </div>
