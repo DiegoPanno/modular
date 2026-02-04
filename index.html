@@ -199,40 +199,20 @@
             <p class="mb-4 text-muted small">
               Compromiso, lealtad y garantía es nuestra premisa.
             </p>
-            <form id="contactForm" class="text-start">
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nombre"
-                  placeholder="Nombre completo"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="tel"
-                  placeholder="WhatsApp (Ej: 2235...)"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  id="mensaje"
-                  rows="3"
-                  placeholder="Contanos sobre tu terreno o proyecto"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="btn btn-warning btn-lg w-100 fw-bold"
-              >
-                ENVIAR CONSULTA
-              </button>
-            </form>
+            <form id="contactForm" class="text-start" data-netlify="true" name="contacto-nexus">
+    <input type="hidden" name="form-name" value="contacto-nexus" />
+
+    <div class="mb-3">
+        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre completo" required>
+    </div>
+    <div class="mb-3">
+        <input type="tel" class="form-control" name="telefono" id="tel" placeholder="WhatsApp (Ej: 2235...)" required>
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" name="mensaje" id="mensaje" rows="3" placeholder="Contanos sobre tu terreno o proyecto"></textarea>
+    </div>
+    <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">ENVIAR CONSULTA</button>
+</form>
           </div>
         </div>
       </div>
