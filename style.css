@@ -22,7 +22,7 @@ body {
 }
 
 .text-primary {
-    color: var(--color-acento) !important;
+    color: var(--color-acento) !important; /* Esto hará que use el naranja #e67e22 */
 }
 
 .nav-link {
