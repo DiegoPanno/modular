@@ -17,15 +17,17 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const myForm = e.target;
     const formData = new FormData(myForm);
     
+    // ESTA LÍNEA ES CLAVE: vincula el envío con el nombre del form en el panel
+    formData.append('form-name', 'contacto-nexus'); 
+
     fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
     })
     .then(() => {
-    const nombreCliente = document.getElementById('nombre').value;
-    alert(`¡Gracias ${nombreCliente}! Nexus Habit ha recibido tu consulta. Nos contactaremos a la brevedad.`);
-    myForm.reset();
-})
-    .catch((error) => alert(error));
+        alert('¡Gracias! Nexus Habit ha recibido tu consulta.');
+        myForm.reset();
+    })
+    .catch((error) => alert('Hubo un error: ' + error));
 });
