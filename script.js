@@ -23,8 +23,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         body: new URLSearchParams(formData).toString(),
     })
     .then(() => {
-        alert('¡Gracias! Nexus Habit ha recibido tu consulta. Nos contactaremos a la brevedad.');
-        myForm.reset();
-    })
+    const nombreCliente = document.getElementById('nombre').value;
+    alert(`¡Gracias ${nombreCliente}! Nexus Habit ha recibido tu consulta. Nos contactaremos a la brevedad.`);
+    myForm.reset();
+})
     .catch((error) => alert(error));
 });
