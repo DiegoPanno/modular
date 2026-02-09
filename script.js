@@ -11,7 +11,7 @@ function alertarInteres(modelo) {
     document.querySelector('#contacto').scrollIntoView({ behavior: 'smooth' });
 }
 
-/*document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const myForm = e.target;
@@ -30,4 +30,4 @@ function alertarInteres(modelo) {
     myForm.reset();
   })
   .catch((error) => alert('Error de conexión: ' + error));
-});*/
+});
