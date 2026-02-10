@@ -205,3 +205,14 @@ footer a:hover {
         border-radius: 0;
     }
 }
+
+/* Agregá esto a tu style.css */
+#trayectoria {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%); /* Un degradado muy suave */
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-trayectoria {
+    border: 1px solid rgba(0,0,0,0.05) !important; /* Un borde casi invisible para definir mejor la tarjeta */
+}
