@@ -1,33 +1,30 @@
-// Manejo del formulario de contacto
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('¡Gracias! Hemos recibido tu mensaje. Un asesor te contactará en breve.');
+
+    // Captura de datos
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const tel = document.getElementById('tel').value;
+    const consulta = document.getElementById('mensaje').value;
+    
+    // Tu número de destino
+    const nroWA = "5492235370799";
+
+    // Construcción del mensaje formateado
+    const texto = `*NUEVA CONSULTA BIT=HOME*%0A` +
+                  `*Cliente:* ${nombre}%0A` +
+                  `*Email:* ${email}%0A` +
+                  `*WhatsApp:* ${tel}%0A` +
+                  `*Mensaje:* ${consulta}`;
+
+    // Apertura de WhatsApp
+    window.open(`https://wa.me/${nroWA}?text=${texto}`, '_blank');
+    
     this.reset();
 });
 
-// Función simple para los botones de modelos
-function alertarInteres(modelo) {
-    console.log("Interés en: " + modelo);
-    document.querySelector('#contacto').scrollIntoView({ behavior: 'smooth' });
+// Función para botones de modelos
+function irAContacto(modelo) {
+    document.getElementById("mensaje").value = `Hola! Me interesa el modelo: ${modelo}.`;
+    document.querySelector("#contacto").scrollIntoView({ behavior: "smooth" });
 }
-
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const myForm = e.target;
-  const formData = new FormData(myForm);
-  
-  // Aseguramos que el nombre coincida con el nuevo name del form
-  formData.append('form-name', 'nexus-form');
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-  .then(() => {
-    alert('¡Recibido! Nos comunicaremos con vos a la brevedad.');
-    myForm.reset();
-  })
-  .catch((error) => alert('Error de conexión: ' + error));
-});
