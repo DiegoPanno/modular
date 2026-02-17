@@ -1,7 +1,7 @@
 /* --- CONFIGURACIÓN DE VARIABLES (Paleta Industrial Premium) --- */
 :root {
     --color-principal: #2c3e50;    /* Gris Antracita - Solidez técnica */
-    --color-acento: #e67e22;       /* Naranja Construcción - Acción y visibilidad */
+    --color-acento: #00a8e8;      /* Naranja Construcción - Acción y visibilidad */
     --color-fondo-oscuro: #1a1a1a; /* Negro para secciones de contraste */
     --color-fondo-claro: #f8f9fa;  /* Blanco Humo para secciones limpias */
     --fuente-base: 'Inter', sans-serif;
@@ -215,4 +215,9 @@ footer a:hover {
 
 .card-trayectoria {
     border: 1px solid rgba(0,0,0,0.05) !important; /* Un borde casi invisible para definir mejor la tarjeta */
+}
+
+footer a.text-white-50:hover {
+    color: var(--color-acento) !important;
+    transition: 0.3s;
 }

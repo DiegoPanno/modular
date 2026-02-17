@@ -10,8 +10,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     // Tu número de destino
     const nroWA = "5492235370799";
 
-    // Construcción del mensaje formateado
-    const texto = `*NUEVA CONSULTA BIT=HOME*%0A` +
+    // Construcción del mensaje formateado con el nuevo nombre
+    const texto = `*NUEVA CONSULTA MODUBIT*%0A` +
                   `*Cliente:* ${nombre}%0A` +
                   `*Email:* ${email}%0A` +
                   `*WhatsApp:* ${tel}%0A` +
@@ -23,8 +23,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     this.reset();
 });
 
-// Función para botones de modelos
+// Función para botones de modelos actualizada
 function irAContacto(modelo) {
-    document.getElementById("mensaje").value = `Hola! Me interesa el modelo: ${modelo}.`;
+    // El texto ahora invita a consultar por el modelo específico de Modubit
+    document.getElementById("mensaje").value = `¡Hola! Me interesa recibir información sobre el modelo: ${modelo}.`;
     document.querySelector("#contacto").scrollIntoView({ behavior: "smooth" });
 }
